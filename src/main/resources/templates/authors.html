@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http:www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>My First spring mvc app</title>
+
+<style>
+
+#table_authors {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 50%;
+}
+
+#table_authors td, #table_authors th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#table_authors tr:nth-child(even){background-color: #f2f2f2;}
+
+#table_authors tr:hover {background-color: #ddd;}
+
+#table_authors th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+
+</head>
+
+<body>
+	<h1>Authors List</h1>
+	
+	<table id="table_authors">
+		<tr>
+			<th>ID</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+		</tr>
+		
+		
+		<tr th:each="author : ${authors}" >
+			<td th:text="${author.id}"></td>
+			<td th:text="${author.firstName}"></td>
+			<td th:text="${author.lastName}"></td>
+		</tr>
+	</table>
+</body>
+</html>
