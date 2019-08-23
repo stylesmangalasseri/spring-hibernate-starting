@@ -1,2 +1,2 @@
 # spring-hibernate-starting
-first spring hibernate project 
+first spring hibernate project with H2 database
